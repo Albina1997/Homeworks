@@ -1,0 +1,65 @@
+
+// 1
+
+let num = prompt ("give me a number")
+
+if (num % 2 === 0) {
+    console.log('even')
+}
+else {
+    console.log('odd')
+}
+
+
+// 2
+
+let num1 = prompt("give me the first number")
+
+let num2 = prompt("give me the second number")
+
+if (num1 % num2 === 0 || num2 % num1 === 0) {
+    console.log(1)
+} else {
+    console.log(0)
+}
+
+
+// 3
+
+let num = prompt("give me the number")
+
+let lastDigit = num % 10
+
+if(lastDigit === 0 ) {
+    console.log( Number(num))
+} else {
+    let nextDigits = Math.floor(num / 10)
+    let result = lastDigit.toString() + nextDigits.toString()
+    console.log(Number(result))
+}
+
+
+// 4
+
+let num1 = Number(prompt ("give me the first number"))
+let num2 = Number(prompt ("give me the second number"))
+let num3 = Number(prompt ("give me the third number"))
+let num4 = Number(prompt ("give me the fourth number"))
+let num5 = Number(prompt ("give me the fifth number"))
+
+console.log((num1 + num2 + num3 + num4 + num5) / 5)
+
+// 5
+
+let n = prompt()
+
+let i = 0
+let j = 0
+
+if(n % 2 === 0 && Math.floor(n / 10)) {
+    i += 1
+}
+
+if(n % 3 === 0 && n % 10 == 1) {
+    j += 1
+}
