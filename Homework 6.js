@@ -49,23 +49,25 @@ function testStartsWith(a, b, n = 0) {
 
 testStartsWith('Albina', 'Alb', 0)
 
-//4. 
-*??????????????
+//4.  endsWith()
 
 
-function testSlice(a, num1, num2) {
-   let str.length
-    let result = ''
-    if (num1 < 0) {
-        num1 = Math.max (0,  str.length + num1)
+
+function testEndsWith(a, b, n = a.length) {
+    let result
+    let str = ""
+    for (let i = n - b.length; i < n; i++) {
+        str += a[i]
     }
-    if (num2 <0) {
-        num2 = Math.max (0 ,  str.length + num2)
+    for (let j = 0; j < str.length; j++) {
+        if (b[j] !== str[j]) {
+            result = false
+            break
+        } else {
+            result = true
+        }
     }
-    for (let i = num1; i < num2; i++) {
-   }
- result += str[i]
-   return result;
+    return result
 }
 
 5. //replaceBy()
@@ -100,6 +102,7 @@ function testReplace (str, toFind, replaceBy) {
 
     return str
 }
+
 
 6.// replaceAll()
 
