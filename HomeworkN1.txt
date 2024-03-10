@@ -1,0 +1,83 @@
+//1
+
+
+function reverseNumber(num) {
+    if (num < 10) {
+        return num
+    } else {
+        return String(num % 10) + reverseNumber(Math.trunc(num/10))
+    }
+}
+
+
+
+//2
+
+function findSecond(num,arr, count = 2) {
+    if (count == 0) {
+        return count - 1
+    } else {
+        return arr.indexOf(num) + findSecond(num, arr.slice(arr.indexOf(num)+1), count - 1)
+    }
+}
+
+
+//3
+function substrInStr (sub, str) {
+    if (str.includes(sub)) {
+        return 1 + substrInStr(sub, str.slice(str.indexOf(sub) + sub.length))
+    } else {
+        return 0
+    }
+}
+
+//4
+
+function replacePi (str) {
+    let strLow = str.toLowerCase()
+    if (strLow.includes('pi')) {
+        return str.substring(0, strLow.indexOf('pi')) + '3,14' + replacePi(str.slice(strLow.indexOf('pi') + 2))
+    } else {
+        return str
+    }
+}
+
+
+
+// 5
+
+
+function flattensArray (arr) {
+    let res = [] 
+    for (let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+            res.push(...flattensArray(arr[i]))
+        } else {
+            res.push(arr[i])
+        }
+    } 
+    return res
+}
+
+
+
+
+//6
+
+
+function sumDigits(num) {
+    if (num < 10) {
+        sum = num
+    } else {
+        num = String(num)
+        let sum = 0
+        for (let i = 0; i < num.length; i++) {
+            sum += Number(num[i])
+        }
+        sumDigits(sum)
+    }
+    return sum   
+}
+
+
+
